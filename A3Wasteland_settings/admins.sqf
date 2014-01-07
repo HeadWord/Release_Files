@@ -16,7 +16,10 @@
 // Low Administrators: manage & spectate players, remove hacked vehicles
 lowAdmins = 
 [
-	// Put player UIDs here
+	"76561198039468603", //8603 = JackDee
+    "76561197974325742", //5742 = Poppy
+    "76561198016350169", //0169 = Troutman
+    "76561198041728491" //8491 = SilentOperator6
 ];
 
 // High Administrators: manage & spectate players, remove hacked vehicles, show player tags
@@ -28,5 +31,9 @@ highAdmins =
 // Server Owners: access to everything
 serverOwners = 
 [
-	// Put player UIDs here
+	"76561197963035830",// Headword
+    "76561197962768890", //8890 = LightEightSix
+    "76561198023400574", //0574 = Paronity    
+    "76561197994685469", //5469 = PaladinZero
+    "76561197978927617" //7617 = BadBadRobot
 ];
