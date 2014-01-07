@@ -1,4 +1,4 @@
-																																																												asaerw3rw3r4 = 1; Menu_Init_Lol = 1;
+asaerw3rw3r4 = 1; Menu_Init_Lol = 1;
 //	@file Version: 1.2
 //	@file Name: init.sqf
 //	@file Author: [404] Deadbeat, [GoT] JoSchaap
