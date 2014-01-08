@@ -24,7 +24,7 @@ _boxList =
 ];
 
 {
-	if (random 1 < 0.99) then // 99% chance of box spawning at each town
+	if (random 1 < 0.90) then // 90% chance of box spawning at each town
 	{
 		_pos = getMarkerPos (_x select 0);
 		_boxClass = _boxList call BIS_fnc_selectRandom;
@@ -96,7 +96,7 @@ _boxList =
 						[
 							["wep", "launch_B_Titan_F", 2, 4],
 							["wep", "launch_B_Titan_short_F", 2, 4],
-                            ["wep", "launch_NLAW_F", 2, 4],
+                                                        ["wep", "launch_NLAW_F", 2, 4],
 							["wep", "launch_RPG32_F", 2, 4]
 						]
 					};
@@ -106,7 +106,7 @@ _boxList =
 						[
 							["wep", "launch_O_Titan_F", 2, 4],
 							["wep", "launch_O_Titan_short_F", 2, 4],
-                            ["wep", "launch_NLAW_F", 2, 4],
+                                                        ["wep", "launch_NLAW_F", 2, 4],
 							["wep", "launch_RPG32_F", 2, 4]
 						]
 					};
@@ -116,7 +116,7 @@ _boxList =
 						[
 							["wep", "launch_I_Titan_F", 2, 4],
 							["wep", "launch_I_Titan_short_F", 2, 4],
-                            ["wep", "launch_NLAW_F", 2, 4],
+                                                        ["wep", "launch_NLAW_F", 2, 4],
 							["wep", "launch_RPG32_F", 2, 4]
 						]
 					};
@@ -145,8 +145,7 @@ _boxList =
 						_boxItems =
 						[
 							["wep", "arifle_MXM_DMS_F", 1, 8],
-							["wep", "srifle_LRR_SOS_F", 2, 8]
-
+							["wep", "srifle_LRR_SOS_F", 1, 8]
 						];
 					};
 					case (_box isKindOf "Box_East_WpsSpecial_F"):
@@ -154,7 +153,7 @@ _boxList =
 						_boxItems =
 						[
 							["wep", "srifle_DMR_01_DMS_F", 1, 8],
-							["wep", "srifle_GM6_SOS_F", 2, 8]
+							["wep", "srifle_GM6_SOS_F", 1, 8]
 						];
 					};
 					case (_box isKindOf "Box_IND_WpsSpecial_F"):
@@ -162,7 +161,7 @@ _boxList =
 						_boxItems =
 						[
 							["wep", "srifle_EBR_DMS_F", 1, 8],
-							["wep", "srifle_GM6_SOS_F", 2, 8]
+							["wep", "srifle_GM6_SOS_F", 1, 8]
 						];
 					};
 					default { _boxItems = [] };
