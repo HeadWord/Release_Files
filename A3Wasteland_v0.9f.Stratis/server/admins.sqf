@@ -2,50 +2,45 @@
 
 if (!isServer) exitWith {};
 
+
 if (loadFile (externalConfigFolder + "\admins.sqf") != "") then
 {
-	call compile preprocessFileLineNumbers (externalConfigFolder + "\admins.sqf");
-}
-else
-{
-	// Admin menu (U key) access levels
+    call compile preprocessFileLineNumbers (externalConfigFolder + "\admins.sqf");
+} else {
 
-	/*******************************************************
-	 Player UID examples :
 
-		"1234567887654321", // Meatwad
-		"8765432112345678", // Master Shake
-		"1234876543211234", // Frylock
-		"1337133713371337"  // Carl
+    // Low Administrators: manage & spectate players, remove hacked vehicles
+    lowAdmins = compileFinal str
+    [
+    "76561198039468603"  //8603 = JackDee
+	"76561197974325742", //5742 = Poppy
+    "76561198016350169", //0169 = Troutman
+    "76561198041728491"  //8491 = SilentOperator6 
+	"76561198018964268"  //4268 = Pager
+    ];
 
-	 Important: Don't put a comma (,) at the end of the last one
-	********************************************************/
 
-	// Low Administrators: manage & spectate players, remove hacked vehicles
-	lowAdmins = compileFinal str
-	[
-		// Put player UIDs here
-	];
+    // High Administrators: manage & spectate players, remove hacked vehicles, show player tags
+    highAdmins = compileFinal str
+    [
+      
+    ];
 
-	// High Administrators: manage & spectate players, remove hacked vehicles, show player tags
-	highAdmins = compileFinal str
-	[
-		// Put player UIDs here
-	];
 
-	// Server Owners: access to everything
-	serverOwners = compileFinal str
-	[
-		// Put player UIDs here
-	];
-
-	/********************************************************/
+    // Server Owners: access to everything
+    serverOwners = compileFinal str
+    [
+    
+    ];
 };
+
 
 if (typeName lowAdmins == "ARRAY") then { lowAdmins = compileFinal str lowAdmins };
 if (typeName highAdmins == "ARRAY") then { highAdmins = compileFinal str highAdmins };
 if (typeName serverOwners == "ARRAY") then { serverOwners = compileFinal str serverOwners };
 
+
 publicVariable "lowAdmins";
 publicVariable "highAdmins";
 publicVariable "serverOwners";
+

@@ -54,14 +54,27 @@ _man4 addWeapon "arifle_TRG20_F";
 _man4 addMagazine "30Rnd_556x45_Stanag";
 _man4 addMagazine "30Rnd_556x45_Stanag";
 
+// Grenadier
+_man5 = _group createUnit ["C_man_polo_3_F", [_pos select 0, (_pos select 1) - 40, 0], [], 1, "Form"];
+removeAllAssignedItems _man5;
+_man5 addUniform "U_B_CombatUniform_mcam_tshirt";
+_man5 addVest "V_PlateCarrier1_rgr";
+_man5 addMagazine "30Rnd_556x45_Stanag";
+_man5 addWeapon "arifle_TRG21_GL_F";
+_man5 addMagazine "30Rnd_556x45_Stanag";
+_man5 addMagazine "30Rnd_556x45_Stanag";
+_man5 addMagazine "1Rnd_HE_Grenade_shell";
+_man5 addMagazine "1Rnd_HE_Grenade_shell";
+_man5 addMagazine "1Rnd_HE_Grenade_shell";
+
 _leader = leader _group;
 
 {
-	_x spawn refillPrimaryAmmo;
-	_x spawn addMilCap;
-	_x call setMissionSkill;
-	_x addRating 9999999;
-	_x addEventHandler ["Killed", {_this call server_playerDied; (_this select 1) call removeNegativeScore}];
+        _x spawn refillPrimaryAmmo;
+        _x spawn addMilCap;
+        _x call setMissionSkill;
+        _x addRating 9999999;
+        _x addEventHandler ["Killed", {_this call server_playerDied; (_this select 1) call removeNegativeScore}];
 } forEach units _group;
 
 [_group, _pos] call defendArea;

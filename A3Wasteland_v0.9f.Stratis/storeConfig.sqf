@@ -75,8 +75,8 @@ launcherArray = compileFinal str
 [
 	["RPG-42 Alamut", "launch_RPG32_F", 400],
 	["PCML", "launch_NLAW_F", 500],
-	["Titan MPRL Compact", "launch_Titan_short_F", 600],
-	["Titan MPRL AA", "launch_Titan_F", 600]
+	["Titan MPRL Compact", "launch_Titan_short_F", 500],
+	["Titan MPRL AA", "launch_Titan_F", 500]
 ];
 
 allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call rifleArray + call lmgArray + call shotgunArray + call launcherArray);
@@ -223,10 +223,10 @@ accessoriesArray = compileFinal str
 	["DMS", "optic_DMS", 175, "item"],
 	["LRPS", "optic_LRPS", 175, "item"],
 	["SOS", "optic_SOS", 200, "item"],
-	["NVS", "optic_NVS", 400, "item"],
-	["TWS", "optic_tws", 600, "item"],
-	["TWS MG", "optic_tws_mg", 650, "item"],
-	["Nightstalker", "optic_Nightstalker", 750, "item"]
+	//["NVS", "optic_NVS", 400, "item"],
+	//["TWS", "optic_tws", 600, "item"],
+	//["TWS MG", "optic_tws_mg", 650, "item"],
+	//["Nightstalker", "optic_Nightstalker", 750, "item"]
 ];
 
 // If commented, means the color/camo isn't implemented or is a duplicate of another hat
